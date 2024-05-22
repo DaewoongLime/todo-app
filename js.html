@@ -5,37 +5,101 @@
     */
     
     // Variable declaration
-    var a = "hi" // can be changed
-    let b = 10
-    const c = 0 // cannot be changed throughout
+    var a = "hi"; // can be changed
+    let b = 10;
+    const c = 0; // cannot be changed throughout
 
-    console.log(b/c)
+    console.log(b/c);
 
-    a = a + ", Hello!"
-    console.log(a)
+    a = a + ", Hello!";
+    console.log(a);
 
     // .length returns the length of a string
-    console.log(a.length)
+    console.log(a.length);
 
     // access characters using []
-    console.log(a[1])
+    console.log(a[1]);
 
     // strings are immutable!
-    a[0] = "H"
-    console.log(a[0])
+    a[0] = "H";
+    console.log(a[0]);
 
     // array declaration
-    var arr = [1,2,3]
+    var arr = [1,2,3];
     // .push = append in python
-    arr.push(1)
-    console.log(arr)
+    arr.push(1);
+    console.log(arr);
     // .pop = .pop
-    arr.pop()
-    console.log(arr)
+    arr.pop();
+    console.log(arr);
     // .shift pops the first element
-    arr.shift()
-    console.log(arr)
+    arr.shift();
+    console.log(arr);
     // .unshift appends to the beginning of arr
-    arr.unshift(1)
-    console.log(arr)
+    arr.unshift(1);
+    console.log(arr);
+
+    // functions
+    function myfunc() {
+        var a = 3;
+    }
+    a = 1;
+    myfunc();
+    console.log(a);
+
+    //exercise
+    function nextInLine(arr, item) {
+        arr.push(item);
+        return arr.shift();
+    }
+    var arr = [1,2,3,4,5];
+    console.log("Before: ", arr);
+    console.log(nextInLine(arr, 6));
+    console.log("after: ", arr);
+
+    // conditional statements:
+    /* if (condition) {
+        do something
+    } else if {
+        do something else
+    } else {
+        do something else too
+    }
+     */
+
+    // 3 == '3' <- returns True
+    // 3 != '3' <- returns False
+    // 3 === '3' <- returns False
+    // 3 !== '3' <- returns True
+    // and == &&, or == || like in c++
+
+    // switch
+    function caseswitch(val) {
+        var ans;
+        switch(val) {
+            case 1: 
+                ans = "one";
+                break;
+            case 2: 
+                ans = "two";
+                break;
+            default:
+                ans = "don't care";
+                break;
+        }
+        return ans
+    }
+    console.log(caseswitch(3))
+
+    // obejcts (similar dict in python)
+    var obj = {
+        "name" : "Daewoong Lim",
+        "age" : "21",
+        "my hobbies" : ["guitar", "cycling", "coding"],
+    }
+    console.log(obj.name, obj.age)
+    // or
+    console.log(obj["name"]) // this is used when key has space
+    console.log(obj["my hobbies"])
+
 </script>
