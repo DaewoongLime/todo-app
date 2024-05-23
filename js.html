@@ -102,4 +102,97 @@
     console.log(obj["name"]) // this is used when key has space
     console.log(obj["my hobbies"])
 
+    obj['name'] = "zzz"
+    console.log(obj['name'])
+
+    console.log(obj['hello'])
+    obj.hello = "bye"
+    console.log(obj['hello'])
+
+    console.log(obj.hasOwnProperty('hello'))
+    delete obj.hello
+    console.log(obj['hello'])
+    console.log(obj.hasOwnProperty('hello'))
+
+    // while loop
+    var array = [];
+    var i = 0;
+    while(i < 5) {
+        array.push(i);
+        i++;
+    };
+    console.log(array);
+
+    // for loop
+    for(var i = 0; i < 5; i++) {
+        array.push(i);
+    };
+    console.log(array);
+
+    // do while loop
+    array = [];
+    var i = 5;
+    do {
+        array.push(i);
+        i++;
+    } while(i < 5);
+    console.log(array);
+
+    // random fraction (0 <= x < 1)
+    console.log(Math.random());
+
+    // random whole number
+    var num = 100;
+    // 1 <= num < rand
+    var rand = Math.floor(Math.random() * num);
+    console.log(rand);
+
+    // random whole number within a range
+    var min = 10;
+    var max = 20;
+    // min <= rand < max
+    var rand = Math.floor(Math.random() * (max - min))+min;
+    console.log(rand);
+
+    // convert str to int (python : int())
+    console.log(parseInt('52'));
+    console.log(parseInt('aa'));
+
+    // convert str to int with different bases
+    console.log(parseInt('1010101',2));
+
+    // Ternary operator (one line if statement)
+    var x = 3;
+    var y = 2;
+    // condition ? statement-when-true : statement-when false
+    // condition1 ? statement-when-condition1-true : condition2 ? statement-when-condition2-true : statement-when-false 
+    console.log(x < y ? "x < y" : "x > y");
+
+    // using the let keyword forbids declaring variable again e.g.:
+    let z = "hi"
+    // let z = "lol, this would cause an error"
+    // but you can reassign value
+    z = "lol, no error"
+
+    //"use strict" <- catches coding mistakes
+    // using 'let' retains the scope of variable to the current block
+    let q = 1;
+    if(true) {
+        let q = 2; // this will not change value of q outside if block
+        console.log(q);
+    }
+    console.log(q);
+    // above prints 2,1 whereas using var prints 2,2
+    
+    // using const variable for an array lets you alter elements in array while forbiding reassigning
+    const c_arr = [1,2,3];
+    // c_arr = [2,3,4]; // error
+    c_arr[0] = 4;
+    console.log(c_arr);
+    // to avoid the above situation use Object.freeze()
+    Object.freeze(c_arr);
+    c_arr[1] = 5;
+    console.log(c_arr); // didn't change
+
+
 </script>
