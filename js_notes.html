@@ -194,5 +194,48 @@
     c_arr[1] = 5;
     console.log(c_arr); // didn't change
 
+    // use try-catch to handle errors
 
+    // anonymous function
+    let func = function(x) {
+        return x;
+    };
+    console.log(func(3))
+
+
+    // anonymous function can be written as an arrow function
+    let func2 = (x,y) => x*y;
+    console.log(func2(2,2))
+
+    // use rest operator (...) when no. of arguments unknown
+    const sum = function(...args) {
+        var s = 0
+        for(var i = 0; i < args.length; i++) {
+            s += args[i]
+        };
+        return s
+    };
+    console.log(sum(1,2,3,4,5))
+
+    // spread oerator (also ...) is used to copy array
+    let arr1 = [1,2,3,4,5];
+    let arr2 = [...arr1];
+    arr1[0] = 6;
+    console.log(arr1, arr2)
+
+    // destructing objects (dict in python)
+    const obj1 = {1:1, 2:2, 3:3, 4:{1:5, 2:6}};
+    const {1 : one, 2 : two, 3 : three, 4 : four} = obj1;
+    const {1 : five, 2 : six} = four;
+    console.log(one,two,three,four,five,six)
+
+    // destructing arrays
+    const [w, e, ,r] = [1,2,3,4];
+    console.log(w,e,r)
+
+    // string literals
+    var a = "Daewoong Lim"
+    let message = `Hi! My name is ${a}.
+    Nice to meet you.`
+    console.log(message)
 </script>
